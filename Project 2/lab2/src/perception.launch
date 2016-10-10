@@ -1,0 +1,8 @@
+<launch>
+    <group ns="robot_0">
+	<node name="stage" pkg="stage_ros" type="stageros" args="$(find lab2)/world/playground.world" />
+    </group>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lab2)/rviz/config.rviz"/>
+	<node name="ransac" pkg="lab2" type="ransac.py" />
+    <node name="evader" pkg="lab2" type="evader.py" />
+</launch>
